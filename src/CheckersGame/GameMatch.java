@@ -6,6 +6,10 @@ public class GameMatch {
 
     private Board board;
 
+    public GameMatch() {
+        board = new Board(8,8);
+    }
+
     public GamePiece[][] getPiece(){
 
         GamePiece[][] mat = new GamePiece[board.getRows()][board.getColumns()];
