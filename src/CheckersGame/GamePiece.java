@@ -11,4 +11,8 @@ public class GamePiece extends Piece {
         super(board);
         this.color = color;
     }
+
+    public Color getColor() {
+        return color;
+    }
 }
