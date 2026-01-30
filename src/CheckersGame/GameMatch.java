@@ -1,6 +1,8 @@
 package CheckersGame;
 
 import BoardGame.Board;
+import BoardGame.Position;
+import CheckersGame.Pieces.Checker;
 
 public class GameMatch {
 
@@ -8,6 +10,7 @@ public class GameMatch {
 
     public GameMatch() {
         board = new Board(8,8);
+        initialSetup();
     }
 
     public GamePiece[][] getPiece(){
@@ -20,6 +23,17 @@ public class GameMatch {
             }
         }
         return mat;
+    }
+
+    private void placeNewPiece(char column, int row,GamePiece gamePiece){
+        board.placePiece(gamePiece, new GamePosition(column, row).toPosition());
+    }
+
+    public void initialSetup(){
+        placeNewPiece('a',2, new Checker(board,Color.WHITE));
+        placeNewPiece('a',3, new Checker(board,Color.WHITE));
+        placeNewPiece('a',4, new Checker(board,Color.WHITE));
+
     }
 
 }

@@ -1,5 +1,7 @@
 package BoardGame;
 
+import CheckersGame.Pieces.Checker;
+
 public class Position {
 
     private int row;
